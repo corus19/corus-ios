@@ -1,0 +1,6 @@
+module FacebookCore {
+  umbrella header "FacebookCore-umbrella.h"
+
+  export *
+  module * { export * }
+}

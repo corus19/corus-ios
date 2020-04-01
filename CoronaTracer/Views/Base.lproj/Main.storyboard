@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--CoronaTracer-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="IntialViewController" id="BYZ-38-t0r" customClass="IntialViewController" customModule="CoronaTracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PXE-WI-aD0">
+                                <rect key="frame" x="0.0" y="44" width="414" height="832"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We Use Bluethooth to determine your proximity with other users. If you're within transmittable proximity we keep track of it." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iWc-ry-FW3">
+                                        <rect key="frame" x="19" y="204.5" width="375" height="115"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.074509803920000006" green="0.33725490200000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help stop the spread by turning on you Bluetooth." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjs-oO-Awt">
+                                        <rect key="frame" x="20" y="40" width="375" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="27"/>
+                                        <color key="textColor" red="0.074509803921568626" green="0.33725490196078434" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oa6-Hk-5So">
+                                        <rect key="frame" x="57" y="399.5" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.074509803920000006" green="0.33725490200000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="L1A-KQ-5Ty"/>
+                                            <constraint firstAttribute="height" constant="60" id="zby-AE-JuP"/>
+                                        </constraints>
+                                        <state key="normal" title="Enable bluetooth"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="enableBluetoothAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Xdn-bM-sKm"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iWc-ry-FW3" secondAttribute="trailing" constant="20" id="C66-dJ-aY6"/>
+                                    <constraint firstItem="iWc-ry-FW3" firstAttribute="leading" secondItem="PXE-WI-aD0" secondAttribute="leading" constant="20" id="QIP-8g-5GH"/>
+                                    <constraint firstItem="Oa6-Hk-5So" firstAttribute="top" secondItem="iWc-ry-FW3" secondAttribute="bottom" constant="80" id="Qb8-LB-HLy"/>
+                                    <constraint firstItem="iWc-ry-FW3" firstAttribute="top" secondItem="bjs-oO-Awt" secondAttribute="bottom" constant="100" id="SUc-Jg-wwQ"/>
+                                    <constraint firstItem="bjs-oO-Awt" firstAttribute="leading" secondItem="PXE-WI-aD0" secondAttribute="leading" constant="20" id="Tvj-DL-K2Z"/>
+                                    <constraint firstAttribute="bottom" secondItem="Oa6-Hk-5So" secondAttribute="bottom" constant="150" id="aMP-7S-sLg"/>
+                                    <constraint firstAttribute="trailing" secondItem="bjs-oO-Awt" secondAttribute="trailing" constant="19" id="mmN-Ts-lg3"/>
+                                    <constraint firstItem="bjs-oO-Awt" firstAttribute="top" secondItem="IxQ-cH-wLt" secondAttribute="top" constant="40" id="wQB-RW-kvU"/>
+                                    <constraint firstItem="Oa6-Hk-5So" firstAttribute="centerX" secondItem="PXE-WI-aD0" secondAttribute="centerX" id="xOp-XD-jNS"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="IxQ-cH-wLt"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="pRU-QI-E4j"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iWc-ry-FW3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="1VC-Wx-up6"/>
+                            <constraint firstItem="PXE-WI-aD0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8wB-o5-ZlN"/>
+                            <constraint firstItem="PXE-WI-aD0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="HXt-I3-Wls"/>
+                            <constraint firstItem="iWc-ry-FW3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="Vle-RK-jEY"/>
+                            <constraint firstAttribute="bottom" secondItem="PXE-WI-aD0" secondAttribute="bottom" constant="20" symbolic="YES" id="wuw-eJ-aDA"/>
+                            <constraint firstItem="PXE-WI-aD0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xwk-ky-BTy"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CoronaTracer" id="3ru-W4-R28"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="135.9375"/>
+        </scene>
+        <!--CoronaTracer-->
+        <scene sceneID="TIN-4O-gcL">
+            <objects>
+                <viewController storyboardIdentifier="MarkPositiveViewController" id="xRX-Tj-msa" customClass="MarkPositiveViewController" customModule="CoronaTracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Fr7-Hi-xtu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z0h-Hn-h3L">
+                                <rect key="frame" x="0.0" y="44" width="414" height="832"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="133-qI-3Cx">
+                                        <rect key="frame" x="19" y="407" width="375" height="143.5"/>
+                                        <string key="text">Tap the above icon if you are tested positive for COVID-19 and help stop the spread to people with whom you came in contact with</string>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <color key="textColor" red="0.074509803920000006" green="0.33725490200000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CorUs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rcd-Jn-gU0">
+                                        <rect key="frame" x="20" y="40" width="375" height="55"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
+                                        <color key="textColor" red="0.074509803920000006" green="0.33725490200000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="virus_img" translatesAutoresizingMaskIntoConstraints="NO" id="Qzt-pS-m4T">
+                                        <rect key="frame" x="-147" y="135" width="708" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="bT7-ks-84Z"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbI-eJ-RGt">
+                                        <rect key="frame" x="57" y="314" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.70588235294117641" green="0.13725490196078433" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="eJo-ti-I5l"/>
+                                            <constraint firstAttribute="height" constant="60" id="stZ-ri-eMm"/>
+                                        </constraints>
+                                        <state key="normal" title="Mark +ve"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="markPostive:" destination="xRX-Tj-msa" eventType="touchUpInside" id="1PB-0v-gJU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="133-qI-3Cx" firstAttribute="top" secondItem="CbI-eJ-RGt" secondAttribute="bottom" constant="33" id="1DA-Fy-0Sk"/>
+                                    <constraint firstItem="Qzt-pS-m4T" firstAttribute="centerX" secondItem="z0h-Hn-h3L" secondAttribute="centerX" id="8B9-IA-Gs5"/>
+                                    <constraint firstItem="rcd-Jn-gU0" firstAttribute="leading" secondItem="z0h-Hn-h3L" secondAttribute="leading" constant="20" id="Bs7-z7-bT9"/>
+                                    <constraint firstItem="CbI-eJ-RGt" firstAttribute="centerX" secondItem="z0h-Hn-h3L" secondAttribute="centerX" id="Okm-ju-aOb"/>
+                                    <constraint firstAttribute="bottom" secondItem="133-qI-3Cx" secondAttribute="bottom" constant="150" id="PRA-p6-vTm"/>
+                                    <constraint firstItem="133-qI-3Cx" firstAttribute="leading" secondItem="z0h-Hn-h3L" secondAttribute="leading" constant="20" id="Qyh-Yb-UeQ"/>
+                                    <constraint firstItem="Qzt-pS-m4T" firstAttribute="top" secondItem="rcd-Jn-gU0" secondAttribute="bottom" constant="40" id="Rei-FD-eMm"/>
+                                    <constraint firstAttribute="trailing" secondItem="133-qI-3Cx" secondAttribute="trailing" constant="20" id="dEf-My-i5d"/>
+                                    <constraint firstItem="rcd-Jn-gU0" firstAttribute="top" secondItem="JKG-Jz-4lB" secondAttribute="top" constant="40" id="h3I-lj-Gcn"/>
+                                    <constraint firstItem="CbI-eJ-RGt" firstAttribute="top" secondItem="Qzt-pS-m4T" secondAttribute="bottom" constant="29" id="nub-Q3-eR1"/>
+                                    <constraint firstAttribute="trailing" secondItem="rcd-Jn-gU0" secondAttribute="trailing" constant="19" id="y6M-El-ubx"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="JKG-Jz-4lB"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="LKG-9X-6du"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="z0h-Hn-h3L" secondAttribute="bottom" constant="20" symbolic="YES" id="05v-0I-7Gg"/>
+                            <constraint firstItem="z0h-Hn-h3L" firstAttribute="trailing" secondItem="9DV-0V-hCG" secondAttribute="trailing" id="161-Qk-rgA"/>
+                            <constraint firstItem="133-qI-3Cx" firstAttribute="leading" secondItem="9DV-0V-hCG" secondAttribute="leading" constant="19" id="RQM-hE-KBt"/>
+                            <constraint firstItem="z0h-Hn-h3L" firstAttribute="leading" secondItem="Fr7-Hi-xtu" secondAttribute="leading" id="cIe-8K-VfO"/>
+                            <constraint firstItem="133-qI-3Cx" firstAttribute="trailing" secondItem="9DV-0V-hCG" secondAttribute="trailing" constant="-20" id="cj4-WC-gsk"/>
+                            <constraint firstItem="z0h-Hn-h3L" firstAttribute="top" secondItem="9DV-0V-hCG" secondAttribute="top" id="hga-u7-Hte"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9DV-0V-hCG"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CoronaTracer" id="52f-Br-dVP"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eE9-ao-bHz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2834.7826086956525" y="135.9375"/>
+        </scene>
+        <!--CoronaTracer-->
+        <scene sceneID="1FB-0h-M7d">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="Blb-gD-qQo" customClass="LoginViewController" customModule="CoronaTracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3TN-2f-Vg6">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="0np-cD-jYu">
+                                <rect key="frame" x="0.0" y="54" width="414" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C7G-VU-Uq4">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="159"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8mf-gG-A4W">
+                                        <rect key="frame" x="0.0" y="159" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moh-lx-H4k">
+                                        <rect key="frame" x="0.0" y="179.5" width="414" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="e9D-Za-asn"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0np-cD-jYu" firstAttribute="trailing" secondItem="a4Y-UE-26a" secondAttribute="trailing" id="Gi8-g4-e7R"/>
+                            <constraint firstItem="0np-cD-jYu" firstAttribute="top" secondItem="a4Y-UE-26a" secondAttribute="top" constant="10" id="dS3-jd-Bjm"/>
+                            <constraint firstItem="0np-cD-jYu" firstAttribute="leading" secondItem="a4Y-UE-26a" secondAttribute="leading" id="qah-wb-fmD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="a4Y-UE-26a"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="CoronaTracer" id="H0s-py-EP0"/>
+                    <connections>
+                        <outlet property="emailName" destination="moh-lx-H4k" id="7a9-Pb-rCW"/>
+                        <outlet property="imageView" destination="C7G-VU-Uq4" id="mND-Ps-tAA"/>
+                        <outlet property="nameLabel" destination="8mf-gG-A4W" id="O2X-dV-KEr"/>
+                        <outlet property="userInfoStackView" destination="0np-cD-jYu" id="igb-DQ-rOC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a61-Nq-cWR" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1937.68115942029" y="135.9375"/>
+        </scene>
+        <!--Mark Positive Success View Controller-->
+        <scene sceneID="Lqm-GK-cMM">
+            <objects>
+                <viewController storyboardIdentifier="MarkPositiveSuccessViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Yn0-FP-h0x" customClass="MarkPositiveSuccessViewController" customModule="CoronaTracer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VU9-DY-eia">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6s6-VG-JyH">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lwl-w7-Zzf">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CorUs" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dtI-6D-VW1">
+                                                <rect key="frame" x="20" y="85" width="375" height="55"/>
+                                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="46"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.33725490200000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thank you for help and cooperation. Please stay isolated and help in controlling the spread." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZuL-jL-utI">
+                                                <rect key="frame" x="16" y="172" width="382" height="86"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                                <color key="textColor" red="0.074509803920000006" green="0.33725490200000002" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstItem="dtI-6D-VW1" firstAttribute="top" secondItem="lwl-w7-Zzf" secondAttribute="top" constant="85" id="KC3-H0-L6V"/>
+                                            <constraint firstItem="ZuL-jL-utI" firstAttribute="leading" secondItem="lwl-w7-Zzf" secondAttribute="leading" constant="16" id="V1S-1x-dar"/>
+                                            <constraint firstItem="dtI-6D-VW1" firstAttribute="leading" secondItem="lwl-w7-Zzf" secondAttribute="leading" constant="20" id="XoN-LH-h1d"/>
+                                            <constraint firstItem="ZuL-jL-utI" firstAttribute="top" secondItem="dtI-6D-VW1" secondAttribute="bottom" constant="32" id="Z5Z-YO-BZi"/>
+                                            <constraint firstAttribute="trailing" secondItem="ZuL-jL-utI" secondAttribute="trailing" constant="16" id="ckE-Jv-RaT"/>
+                                            <constraint firstAttribute="trailing" secondItem="dtI-6D-VW1" secondAttribute="trailing" constant="19" id="hlW-kf-6pg"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="lwl-w7-Zzf" firstAttribute="leading" secondItem="6s6-VG-JyH" secondAttribute="leading" id="8xK-Za-k2K"/>
+                                    <constraint firstAttribute="bottom" secondItem="lwl-w7-Zzf" secondAttribute="bottom" id="Juq-nY-HDg"/>
+                                    <constraint firstItem="lwl-w7-Zzf" firstAttribute="width" secondItem="6s6-VG-JyH" secondAttribute="width" id="UWF-bn-uhs"/>
+                                    <constraint firstAttribute="trailing" secondItem="lwl-w7-Zzf" secondAttribute="trailing" id="WCL-ao-EJR"/>
+                                    <constraint firstItem="lwl-w7-Zzf" firstAttribute="height" secondItem="6s6-VG-JyH" secondAttribute="height" id="c1x-P5-vD2"/>
+                                    <constraint firstItem="lwl-w7-Zzf" firstAttribute="top" secondItem="6s6-VG-JyH" secondAttribute="top" id="p1D-c1-CYw"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="YOa-SV-al4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="She-U2-LWl"/>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6s6-VG-JyH" firstAttribute="leading" secondItem="VU9-DY-eia" secondAttribute="leading" id="Zsv-6o-RL1"/>
+                            <constraint firstItem="6s6-VG-JyH" firstAttribute="top" secondItem="VU9-DY-eia" secondAttribute="top" id="hz5-hC-V4g"/>
+                            <constraint firstAttribute="bottom" secondItem="6s6-VG-JyH" secondAttribute="bottom" id="nTa-Ow-oiK"/>
+                            <constraint firstAttribute="trailing" secondItem="6s6-VG-JyH" secondAttribute="trailing" id="nlm-9v-SGc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="zAE-Z4-vif"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="euN-iz-4Cm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3593" y="136"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="virus_img" width="708" height="652"/>
+    </resources>
+</document>
