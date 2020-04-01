@@ -841,7 +841,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = Z823RL6W3Y;
-				INFOPLIST_FILE = CoronaTracer/Info/Info.plist;
+				INFOPLIST_FILE = Info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -862,7 +862,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = Z823RL6W3Y;
-				INFOPLIST_FILE = CoronaTracer/Info/Info.plist;
+				INFOPLIST_FILE = Info/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
